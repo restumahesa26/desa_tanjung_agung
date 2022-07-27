@@ -35,7 +35,7 @@
             </div>
             @empty
 
-            @endforeach
+            @endforelse
         </div>
     </div>
 </div>
