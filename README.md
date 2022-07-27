@@ -7,7 +7,7 @@
 <ol>
     <li>Buka CMD</li>
     <li>Ketik git clone + Salin link github ini ( contoh : git clone www.contoh.com )</li>
-    <li>Jalankan Perintah composer install, Tapi Sebelumnya Harus Menginstal XAMPP dan Composer Terlebih Dahulu</li>
+    <li>Jalankan Perintah composer install atau composer update ( pilih salah satu ), Tapi Sebelumnya Harus Menginstal XAMPP dan Composer Terlebih Dahulu</li>
     <li>Ganti Nama File .env.example menjadi .env</li>
     <li>Jalankan Perintah <i>php artisan migrate:fresh --seed</i> melalui cmd tadi</li>
     <li>Jalankan Perintah <i>php artisan storage:link</i> melalui cmd tadi</li>
