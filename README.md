@@ -9,6 +9,8 @@
     <li>Ketik git clone + Salin link github ini ( contoh : git clone www.contoh.com )</li>
     <li>Jalankan Perintah composer install atau composer update ( pilih salah satu ), Tapi Sebelumnya Harus Menginstal XAMPP dan Composer Terlebih Dahulu</li>
     <li>Ganti Nama File .env.example menjadi .env</li>
+    <li>Hidupkan XAMPP</li>
+    <li>Buat database desa_tanjung_agung di phpmyadmin</li>
     <li>Jalankan Perintah <i>php artisan migrate:fresh --seed</i> melalui cmd tadi</li>
     <li>Jalankan Perintah <i>php artisan storage:link</i> melalui cmd tadi</li>
     <li>Jalankan Perintah <i>php artisan key:generate</i> melalui cmd tadi</li>
