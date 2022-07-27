@@ -25,7 +25,7 @@
             <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
         </div>
         <div class="row g-4">
-            @foreach ($galeri as $item)
+            @forelse ($galeri as $item)
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden">
@@ -36,6 +36,8 @@
                     </div>
                 </div>
             </div>
+            @empty
+
             @endforeach
         </div>
     </div>

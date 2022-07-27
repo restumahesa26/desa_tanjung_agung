@@ -25,7 +25,7 @@
             <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
         </div>
         <div class="row g-4">
-            @foreach ($perdes as $item)
+            @forelse ($perdes as $item)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="{{ url('logo.png') }}" alt="">
@@ -33,6 +33,8 @@
                     <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" target="_blank" href="{{ $item->link }}">Download</a>
                 </div>
             </div>
+            @empty
+
             @endforeach
         </div>
     </div>

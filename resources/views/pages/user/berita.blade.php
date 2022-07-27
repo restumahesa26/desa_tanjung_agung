@@ -25,7 +25,7 @@
             <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
         </div>
         <div class="row g-4">
-            @foreach ($berita as $item)
+            @forelse ($berita as $item)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <img class="img-fluid" src="{{ url('storage/assets/berita-thumbnail/' . $item->thumbnail) }}" alt="">
                 <div class="bg-light p-4">
@@ -36,7 +36,9 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+
+            @endforelse
         </div>
     </div>
 </div>

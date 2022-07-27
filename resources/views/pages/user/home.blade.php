@@ -34,7 +34,9 @@
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <h1 class="display-5 mb-4">Tentang Desa Tanjung Agung</h1>
-                    {!! $tentangDesa->tentang_desa !!}
+                    @if ($tentangDesa)
+                        {!! $tentangDesa->tentang_desa !!}
+                    @endif
                     <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a>
                 </div>
             </div>
@@ -51,7 +53,7 @@
                 <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
             </div>
             <div class="row g-4">
-                @foreach ($bumdes as $item)
+                @forelse ($bumdes as $item)
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="{{ url('storage/assets/bumdes-thumbnail/' . $item->thumbnail) }}" alt="">
@@ -59,7 +61,9 @@
                         <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
                     </div>
                 </div>
-                @endforeach
+                @empty
+
+                @endforelse
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                     <a class="btn btn-primary rounded-pill py-3 px-5" href="{{ route('bumdes') }}">Lihat Lebih Banyak BUMDES</a>
                 </div>
@@ -84,7 +88,7 @@
             <div class="tab-content">
                 <div id="tab-1" class="tab-pane fade show p-0 active">
                     <div class="row g-4">
-                        @foreach ($galeri as $item)
+                        @forelse ($galeri as $item)
                         <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="product-item">
                                 <div class="position-relative bg-light overflow-hidden">
@@ -95,7 +99,9 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                        @empty
+
+                        @endforelse
                         <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                             <a class="btn btn-primary rounded-pill py-3 px-5" href="{{ route('galeri') }}">Lihat Lebih Banyak Galeri</a>
                         </div>
@@ -115,7 +121,7 @@
                 <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
             </div>
             <div class="row g-4">
-                @foreach ($berita as $item)
+                @forelse ($berita as $item)
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <img class="img-fluid" src="{{ url('storage/assets/berita-thumbnail/' . $item->thumbnail) }}" alt="">
                     <div class="bg-light p-4">
@@ -126,7 +132,9 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+
+                @endforelse
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                     <a class="btn btn-primary rounded-pill py-3 px-5" href="{{ route('berita-desa') }}">Lihat Lebih Banyak Berita</a>
                 </div>
