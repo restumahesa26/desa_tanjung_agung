@@ -52,6 +52,15 @@
                             </span>
                         @enderror
                     </div>
+                    <div class="form-group">
+                        <label for='isi'>Isi</label>
+                        <textarea class='form-control' name='isi' id='isi' placeholder='Masukkan Isi Lowongan Kerja' required>{!! $item->isi !!}</textarea>
+                        @error('isi')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
                     <button type='submit' class='btn btn-primary btn-block py-2 btn-edit'>Simpan</button>
                 </form>
             </div>
@@ -61,6 +70,16 @@
 @endsection
 
 @push('addon-script')
+    <script type="text/javascript" src="{{ url('js/ckeditor/ckeditor.js') }}"></script>
+
+    <script>
+        CKEDITOR.replace('isi', {
+            height: 500,
+            filebrowserUploadUrl: "{{ route('ckeditor.upload', ['_token' => csrf_token() ]) }}",
+            filebrowserUploadMethod: 'form'
+        });
+    </script>
+
     <script src="{{ url('js/sweetalert2.all.min.js') }}"></script>
 
     <script>

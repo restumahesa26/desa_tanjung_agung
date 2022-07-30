@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Perdes;
+use App\Models\LaporanDesa;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\ImageManagerStatic as Image;
 
-class PerdesController extends Controller
+class LaporanDesaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,9 @@ class PerdesController extends Controller
      */
     public function index()
     {
-        $items = Perdes::latest()->get();
+        $items = LaporanDesa::latest()->get();
 
-        return view('pages.admin.perdes.index', [
+        return view('pages.admin.laporan-desa.index', [
             'items' => $items
         ]);
     }
@@ -30,7 +28,7 @@ class PerdesController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.perdes.create');
+        return view('pages.admin.laporan-desa.create');
     }
 
     /**
@@ -55,13 +53,13 @@ class PerdesController extends Controller
 
         $this->validate($request, $rules, $customMessages);
 
-        Perdes::create([
+        LaporanDesa::create([
             'judul' => $request->judul,
             'link' => $request->link,
             'isi' => $request->isi
         ]);
 
-        return redirect()->route('perdes.index')->with(['success' => 'Berhasil Menambah Perdes']);
+        return redirect()->route('laporan-desa.index')->with(['success' => 'Berhasil Menambah Laporan Desa']);
     }
 
     /**
@@ -83,9 +81,9 @@ class PerdesController extends Controller
      */
     public function edit($id)
     {
-        $item = Perdes::findOrFail($id);
+        $item = LaporanDesa::findOrFail($id);
 
-        return view('pages.admin.perdes.edit', [
+        return view('pages.admin.laporan-desa.edit', [
             'item' => $item
         ]);
     }
@@ -113,7 +111,7 @@ class PerdesController extends Controller
 
         $this->validate($request, $rules1, $customMessages);
 
-        $item = Perdes::findOrFail($id);
+        $item = LaporanDesa::findOrFail($id);
 
         $item->update([
             'judul' => $request->judul,
@@ -121,7 +119,7 @@ class PerdesController extends Controller
             'isi' => $request->isi,
         ]);
 
-        return redirect()->route('perdes.index')->with(['success' => 'Berhasil Mengubah Perdes']);
+        return redirect()->route('laporan-desa.index')->with(['success' => 'Berhasil Mengubah Laporan Desa']);
     }
 
     /**
@@ -132,10 +130,10 @@ class PerdesController extends Controller
      */
     public function destroy($id)
     {
-        $item = Perdes::findOrFail($id);
+        $item = LaporanDesa::findOrFail($id);
 
         $item->delete();
 
-        return redirect()->route('perdes.index')->with(['success' => 'Berhasil Menghapus Perdes']);
+        return redirect()->route('laporan-desa.index')->with(['success' => 'Berhasil Menghapus Laporan Desa']);
     }
 }

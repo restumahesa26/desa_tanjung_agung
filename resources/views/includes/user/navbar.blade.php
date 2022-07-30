@@ -26,7 +26,7 @@
                         <a href="{{ route('berita-desa') }}" class="dropdown-item">Berita</a>
                         <a href="{{ route('bumdes') }}" class="dropdown-item">BUMDES</a>
                         <a href="{{ route('perdes') }}" class="dropdown-item">PERDES</a>
-                        <a href="blog.html" class="dropdown-item">Laporan Desa</a>
+                        <a href="{{ route('laporan-desa') }}" class="dropdown-item">Laporan Desa</a>
                     </div>
                 </div>
                 <a href="{{ route('kontak') }}" class="nav-item nav-link @if(Route::is('kontak')) active @endif">Kontak</a>

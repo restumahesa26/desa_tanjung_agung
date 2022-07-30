@@ -7,6 +7,7 @@ use App\Models\Berita;
 use App\Models\Bumdes;
 use App\Models\Galeri;
 use App\Models\KritikSaran;
+use App\Models\LaporanDesa;
 use App\Models\PemerintahDesa;
 use App\Models\Perdes;
 use App\Models\TentangDesa;
@@ -19,7 +20,7 @@ class HomeController extends Controller
         $tentangDesa = TentangDesa::first();
         $bumdes = Bumdes::paginate(3);
         $berita = Berita::paginate(3);
-        $galeri = Galeri::inRandomOrder()->paginate(6);
+        $galeri = Galeri::inRandomOrder()->paginate(8);
 
         return view('pages.user.home', [
             'tentangDesa' => $tentangDesa, 'bumdes' => $bumdes, 'berita' => $berita, 'galeri' => $galeri
@@ -105,5 +106,50 @@ class HomeController extends Controller
         ]);
 
         return redirect()->route('home')->with(['success' => 'Terima Kasih Atas Kritik dan Sarannya']);
+    }
+
+    public function laporan_desa()
+    {
+        $laporan = LaporanDesa::latest()->get();
+
+        return view('pages.user.laporan-desa', [
+            'laporan' => $laporan
+        ]);
+    }
+
+    public function detailBerita($id)
+    {
+        $berita = Berita::findOrFail($id);
+
+        return view('pages.user.detail-berita', [
+            'berita' => $berita
+        ]);
+    }
+
+    public function detailBumdes($id)
+    {
+        $bumdes = Bumdes::findOrFail($id);
+
+        return view('pages.user.detail-bumdes', [
+            'bumdes' => $bumdes
+        ]);
+    }
+
+    public function detailPerdes($id)
+    {
+        $perdes = Perdes::findOrFail($id);
+
+        return view('pages.user.detail-perdes', [
+            'perdes' => $perdes
+        ]);
+    }
+
+    public function detailLaporan($id)
+    {
+        $laporan = LaporanDesa::findOrFail($id);
+
+        return view('pages.user.detail-laporan-desa', [
+            'laporan' => $laporan
+        ]);
     }
 }

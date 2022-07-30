@@ -29,7 +29,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <img class="img-fluid" src="{{ url('storage/assets/berita-thumbnail/' . $item->thumbnail) }}" alt="">
                 <div class="bg-light p-4">
-                    <a class="d-block h5 lh-base mb-4" href="">{{ $item->judul }}</a>
+                    <a class="d-block h5 lh-base mb-4" href="{{ route('berita-desa.detail', $item->id) }}">{{ $item->judul }}</a>
                     <div class="text-muted border-top pt-4">
                         <small class="me-3"><i class="fa fa-user text-primary me-2"></i>Admin</small>
                         <small class="me-3"><i class="fa fa-calendar text-primary me-2"></i>{{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F, Y') }}</small>

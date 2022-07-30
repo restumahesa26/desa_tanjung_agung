@@ -26,7 +26,11 @@
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <h1 class="display-5 mb-4">Tentang Desa Tanjung Agung</h1>
-                {!! $tentangDesa->tentang_desa !!}
+                @if ($tentangDesa)
+                    {!! $tentangDesa->tentang_desa !!}
+                @else
+                    <p>Informasi belum dimasukkan Admin</p>
+                @endif
             </div>
             <div class="col-lg-6 wow fadeIn">
                 <h2>Batas-batas Desa</h2>
@@ -34,19 +38,19 @@
                     <tbody>
                         <tr>
                             <th style="width: 30%">Sebelah Utara</th>
-                            <th>{{ $batasDesa->utara }}</th>
+                            <th>{{ $batasDesa ? $batasDesa->utara : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 30%">Sebelah Selatan</th>
-                            <th>{{ $batasDesa->selatan }}</th>
+                            <th>{{ $batasDesa ? $batasDesa->selatan : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 30%">Sebelah Timur</th>
-                            <th>{{ $batasDesa->timur }}</th>
+                            <th>{{ $batasDesa ? $batasDesa->timur : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 30%">Sebelah Barat</th>
-                            <th>{{ $batasDesa->barat }}</th>
+                            <th>{{ $batasDesa ? $batasDesa->barat : '-' }}</th>
                         </tr>
                     </tbody>
                 </table>
@@ -57,27 +61,27 @@
                     <tbody>
                         <tr>
                             <th style="width: 50%">Kepala Desa</th>
-                            <th>{{ $pemerintahDesa->kades }}</th>
+                            <th>{{ $pemerintahDesa ? $pemerintahDesa->kades : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 50%">Sekretaris Desa</th>
-                            <th>{{ $pemerintahDesa->sekdes }}</th>
+                            <th>{{ $pemerintahDesa ? $pemerintahDesa->sekdes : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 50%">Kaur Umum & Perencanaan</th>
-                            <th>{{ $pemerintahDesa->kaur_umum_perencanaan }}</th>
+                            <th>{{ $pemerintahDesa ? $pemerintahDesa->kaur_umum_perencanaan : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 50%">Kasi Kesra</th>
-                            <th>{{ $pemerintahDesa->kasi_kesra }}</th>
+                            <th>{{ $pemerintahDesa ? $pemerintahDesa->kasi_kesra : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 50%">Kasi Pelayanan</th>
-                            <th>{{ $pemerintahDesa->kasi_pelayanan }}</th>
+                            <th>{{ $pemerintahDesa ? $pemerintahDesa->kasi_pelayanan : '-' }}</th>
                         </tr>
                         <tr>
                             <th style="width: 50%">Kasi Pemerintah</th>
-                            <th>{{ $pemerintahDesa->kasi_pemerintah }}</th>
+                            <th>{{ $pemerintahDesa ? $pemerintahDesa->kasi_pemerintah : '-' }}</th>
                         </tr>
                     </tbody>
                 </table>
@@ -105,7 +109,7 @@
             </div>
             @empty
 
-            @endforeach
+            @endforelse
         </div>
     </div>
 </div>

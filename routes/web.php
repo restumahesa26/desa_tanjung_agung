@@ -6,6 +6,7 @@ use App\Http\Controllers\BumdesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaporanDesaController;
 use App\Http\Controllers\PemerintahDesaController;
 use App\Http\Controllers\PerdesController;
 use App\Http\Controllers\ProfileController;
@@ -29,15 +30,25 @@ Route::get('/profil-desa', [HomeController::class, 'profil_desa'])->name('profil
 
 Route::get('/berita-desa', [HomeController::class, 'berita'])->name('berita-desa');
 
+Route::get('/berita-desa/{id}/detail', [HomeController::class, 'detailBerita'])->name('berita-desa.detail');
+
 Route::get('/badan-usaha-milik-desa', [HomeController::class, 'bumdes'])->name('bumdes');
 
+Route::get('/badan-usaha-milik-desa/{id}/detail', [HomeController::class, 'detailBumdes'])->name('bumdes.detail');
+
 Route::get('/peraturan-desa', [HomeController::class, 'perdes'])->name('perdes');
+
+Route::get('/peraturan-desa/{id}/detail', [HomeController::class, 'detailPerdes'])->name('perdes.detail');
 
 Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
 
 Route::get('/kontak-kami', [HomeController::class, 'kontak'])->name('kontak');
 
 Route::post('/kontak-kami/store', [HomeController::class, 'store_kontak'])->name('kontak.store');
+
+Route::get('/laporan-desa', [HomeController::class, 'laporan_desa'])->name('laporan-desa');
+
+Route::get('/laporan-desa/{id}/detail', [HomeController::class, 'detailLaporan'])->name('laporan-desa.detail');
 
 Route::prefix('dashboard')
     ->middleware(['auth'])
@@ -57,6 +68,8 @@ Route::prefix('dashboard')
         Route::resource('pemerintah-desa', PemerintahDesaController::class);
 
         Route::resource('galeri', GaleriController::class);
+
+        Route::resource('laporan-desa', LaporanDesaController::class);
 
         Route::get('/profile/show', [ProfileController::class, 'edit'])->name('profile.edit');
 

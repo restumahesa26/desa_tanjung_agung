@@ -37,9 +37,14 @@
                     <i class="ti-support"></i><span class="nav-text">BUMDES</span>
                 </a>
             </li>
-            <li class="@if(Route::is('bumdes.*'))mm-active @endif">
-                <a href="{{ route('perdes.index') }}" class="@if(Route::is('bumdes.*'))mm-active @endif">
+            <li class="@if(Route::is('perdes.*'))mm-active @endif">
+                <a href="{{ route('perdes.index') }}" class="@if(Route::is('perdes.*'))mm-active @endif">
                     <i class="ti-pin-alt"></i><span class="nav-text">Peraturan Desa</span>
+                </a>
+            </li>
+            <li class="@if(Route::is('laporan-desa.*'))mm-active @endif">
+                <a href="{{ route('laporan-desa.index') }}" class="@if(Route::is('laporan-desa.*'))mm-active @endif">
+                    <i class="ti-archive"></i><span class="nav-text">Laporan Desa</span>
                 </a>
             </li>
             <li class="@if(Route::is('galeri.*'))mm-active @endif">

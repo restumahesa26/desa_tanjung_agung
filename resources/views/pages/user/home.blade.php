@@ -37,7 +37,7 @@
                     @if ($tentangDesa)
                         {!! $tentangDesa->tentang_desa !!}
                     @endif
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="{{ route('profil-desa') }}">Read More</a>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
                         <img class="img-fluid mb-4" src="{{ url('storage/assets/bumdes-thumbnail/' . $item->thumbnail) }}" alt="">
                         <h4 class="mb-3">{{ $item->judul }}</h4>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="{{ route('bumdes.detail', $item->id) }}">Read More</a>
                     </div>
                 </div>
                 @empty
@@ -125,7 +125,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <img class="img-fluid" src="{{ url('storage/assets/berita-thumbnail/' . $item->thumbnail) }}" alt="">
                     <div class="bg-light p-4">
-                        <a class="d-block h5 lh-base mb-4" href="">{{ $item->judul }}</a>
+                        <a class="d-block h5 lh-base mb-4" href="{{ route('berita-desa.detail', $item->id) }}">{{ $item->judul }}</a>
                         <div class="text-muted border-top pt-4">
                             <small class="me-3"><i class="fa fa-user text-primary me-2"></i>Admin</small>
                             <small class="me-3"><i class="fa fa-calendar text-primary me-2"></i>{{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F, Y') }}</small>

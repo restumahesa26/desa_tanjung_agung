@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePerdesTable extends Migration
+class CreateLaporanDesasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePerdesTable extends Migration
      */
     public function up()
     {
-        Schema::create('perdes', function (Blueprint $table) {
+        Schema::create('laporan_desas', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
             $table->string('link');
@@ -29,6 +29,6 @@ class CreatePerdesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('perdes');
+        Schema::dropIfExists('laporan_desas');
     }
 }

@@ -1,21 +1,21 @@
 @extends('layouts.admin')
 
 @section('title')
-    <title>Admin | Tambah Perdes</title>
+    <title>Admin | Tambah Laporan Desa</title>
 @endsection
 
 @section('content')
 <div class="row page-titles mx-0">
     <div class="col-sm-6 p-md-0">
         <div class="welcome-text">
-            <h4>Tambah Perdes</h4>
-            <p>Form Menambahkan Perdes</p>
+            <h4>Tambah Laporan Desa</h4>
+            <p>Form Menambahkan Laporan Desa</p>
         </div>
     </div>
     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('perdes.index') }}">Perdes</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('laporan-desa.index') }}">Laporan Desa</a></li>
             <li class="breadcrumb-item active"><a href="#">Tambah Data</a></li>
         </ol>
     </div>
@@ -25,16 +25,16 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <a href="{{ route('perdes.index') }}" class="btn btn-warning btn-sm mr-2 text-white">
+                <a href="{{ route('laporan-desa.index') }}" class="btn btn-warning btn-sm mr-2 text-white">
                     <i class="ti-angle-double-left"></i> Back
                 </a>
             </div>
             <div class="card-body px-4">
-                <form action="{{ route('perdes.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('laporan-desa.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for='judul'>Judul Perdes</label>
-                        <input class='form-control @error('judul') is-invalid @enderror' type='text' name='judul' id='judul' placeholder='Masukkan Judul Perdes' value='{{ old('judul') }}' required />
+                        <label for='judul'>Judul Laporan Desa</label>
+                        <input class='form-control @error('judul') is-invalid @enderror' type='text' name='judul' id='judul' placeholder='Masukkan Judul Laporan Desa' value='{{ old('judul') }}' required />
                         @error('judul')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
