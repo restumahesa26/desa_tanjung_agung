@@ -28,7 +28,7 @@
             @forelse ($laporan as $item)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="{{ url('logo.png') }}" alt="">
+                    <img class="img-fluid mb-4" src="{{ url('image.jpg') }}" alt="">
                     <h4 class="mb-3">{{ $item->judul }}</h4>
                     <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="{{ route('laporan-desa.detail', $item->id) }}">Read More</a>
                 </div>
