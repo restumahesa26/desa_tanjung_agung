@@ -10,8 +10,8 @@
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
-                                <div class="col-lg-7">
-                                    <h1 class="display-2 mb-5 animated slideInDown text-white">Desa Tanjung Agung</h1>
+                                <div class="col-lg-12">
+                                    <h1 class="display-3 mb-5 animated slideInDown text-white">Desa Tanjung Agung Madani <br>( Makmur & Melayani ) <br> Kec. Maje, Kab. Kaur, Prov. Bengkulu</h1>
                                 </div>
                             </div>
                         </div>
@@ -48,8 +48,8 @@
     <!-- Feature Start -->
     <div class="container-fluid bg-light bg-icon my-5 py-6">
         <div class="container">
-            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
-                <h1 class="display-5 mb-3">Badan Usaha Milik Desa (BUMDES)</h1>
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 1000px;">
+                <h1 class="display-5 mb-3">Badan Usaha Milik Desa (BUMDES) <br> "Raja Madani"</h1>
                 <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
             </div>
             <div class="row g-4">

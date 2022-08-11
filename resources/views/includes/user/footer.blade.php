@@ -7,14 +7,14 @@
             <h1 class="fw-bold text-secondary m-0">Ag<span class="text-primary">u</span>ng</h1>
                 <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
             </div>
-            <div class="col-lg-2 col-md-6">
+            <div class="col-lg-1 col-md-6">
 
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <h4 class="text-light mb-4">Alamat</h4>
                 <p><i class="fa fa-map-marker-alt me-3"></i>Desa Tanjung Agung, Kecamatan Maje, Kabupaten Kaur, Provinsi Bengkulu</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+62 822-4142-3507</p>
+                <p><i class="fa fa-envelope me-3"></i>tanjung_agung_madani@yahoo.co.id</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Quick Links</h4>
