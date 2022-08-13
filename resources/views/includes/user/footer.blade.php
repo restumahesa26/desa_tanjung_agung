@@ -5,7 +5,6 @@
             <div class="col-lg-4 col-md-6">
                 <h1 class="fw-bold text-primary m-0" style="float: left;">Ta<span class="text-secondary">nju</span>ng&nbsp;</h1>
             <h1 class="fw-bold text-secondary m-0">Ag<span class="text-primary">u</span>ng</h1>
-                <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
             </div>
             <div class="col-lg-1 col-md-6">
 
